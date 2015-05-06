@@ -13,6 +13,10 @@
 		16F518F71AF9854100CFFEF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F61AF9854100CFFEF7 /* Images.xcassets */; };
 		16F518FA1AF9854100CFFEF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F81AF9854100CFFEF7 /* LaunchScreen.xib */; };
 		16F519061AF9854100CFFEF7 /* trocaeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519051AF9854100CFFEF7 /* trocaeTests.swift */; };
+		16F519131AF9982700CFFEF7 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519111AF9982700CFFEF7 /* ENSideMenu.swift */; };
+		16F519141AF9982700CFFEF7 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519121AF9982700CFFEF7 /* ENSideMenuNavigationController.swift */; };
+		16F519181AF9990C00CFFEF7 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519171AF9990C00CFFEF7 /* MenuTableViewController.swift */; };
+		16F5191A1AF99C5100CFFEF7 /* MenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519191AF99C5100CFFEF7 /* MenuNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		16F518FF1AF9854100CFFEF7 /* trocaeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trocaeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F519041AF9854100CFFEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F519051AF9854100CFFEF7 /* trocaeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trocaeTests.swift; sourceTree = "<group>"; };
+		16F519111AF9982700CFFEF7 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		16F519121AF9982700CFFEF7 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		16F519171AF9990C00CFFEF7 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		16F519191AF99C5100CFFEF7 /* MenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +85,9 @@
 		16F518EC1AF9854100CFFEF7 /* trocae */ = {
 			isa = PBXGroup;
 			children = (
+				16F519101AF997ED00CFFEF7 /* Library */,
+				16F5190F1AF997CD00CFFEF7 /* Controllers */,
 				16F518EF1AF9854100CFFEF7 /* AppDelegate.swift */,
-				16F518F11AF9854100CFFEF7 /* ViewController.swift */,
 				16F518F31AF9854100CFFEF7 /* Main.storyboard */,
 				16F518F61AF9854100CFFEF7 /* Images.xcassets */,
 				16F518F81AF9854100CFFEF7 /* LaunchScreen.xib */,
@@ -110,6 +119,25 @@
 				16F519041AF9854100CFFEF7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16F5190F1AF997CD00CFFEF7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				16F519171AF9990C00CFFEF7 /* MenuTableViewController.swift */,
+				16F519191AF99C5100CFFEF7 /* MenuNavigationController.swift */,
+				16F518F11AF9854100CFFEF7 /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		16F519101AF997ED00CFFEF7 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				16F519111AF9982700CFFEF7 /* ENSideMenu.swift */,
+				16F519121AF9982700CFFEF7 /* ENSideMenuNavigationController.swift */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,7 +240,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16F519141AF9982700CFFEF7 /* ENSideMenuNavigationController.swift in Sources */,
+				16F519181AF9990C00CFFEF7 /* MenuTableViewController.swift in Sources */,
+				16F519131AF9982700CFFEF7 /* ENSideMenu.swift in Sources */,
 				16F518F21AF9854100CFFEF7 /* ViewController.swift in Sources */,
+				16F5191A1AF99C5100CFFEF7 /* MenuNavigationController.swift in Sources */,
 				16F518F01AF9854100CFFEF7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
