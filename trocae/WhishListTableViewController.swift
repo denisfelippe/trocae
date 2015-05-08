@@ -13,7 +13,7 @@ class WhishListTableViewController: UITableViewController, ENSideMenuDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenuController()?.sideMenu?.delegate = self
-        self.title = "Interesses"
+        self.title = "Interesse"
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "menu_ico"), style: UIBarButtonItemStyle.Plain, target: self, action: "toggleSideMenuView")
         self.navigationItem.leftBarButtonItem = leftButton

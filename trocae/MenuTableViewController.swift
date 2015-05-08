@@ -11,7 +11,7 @@ import UIKit
 class MenuTableViewController: UITableViewController {
 
     var selectedMenuItem : Int = 0
-    var titulosMenu : [String] = ["Interesses", "Meus Jogos", "Mapa"]
+    var titulosMenu : [String] = ["Interesses", "Meus Jogos", "Mapa", "Buscar Jogos"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,12 +68,7 @@ class MenuTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        println("did select row: \(indexPath.row)")
-        
-        if (indexPath.row == selectedMenuItem) {
-            return
-        }
+
         selectedMenuItem = indexPath.row
         
         //Present new view controller
@@ -81,13 +76,16 @@ class MenuTableViewController: UITableViewController {
         var destViewController : UIViewController
         switch (indexPath.row) {
         case 0:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController1") as UIViewController
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController1")as UIViewController
             break
         case 1:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController2")as UIViewController
             break
-        default:
+        case 2:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController3")as UIViewController
+            break
+        default:
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("searchViewController")as UIViewController
             break
         }
         sideMenuController()?.setContentViewController(destViewController)

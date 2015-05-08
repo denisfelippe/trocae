@@ -8,11 +8,12 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, RegisterViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +22,40 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        //
+    }
+    
+    func temp() {
+        self.performSegueWithIdentifier("segueLogin", sender: nil)
+    }
+    
+    func usuarioCadastrado()
+    {
+        println("Usuario cadastrado")
+        NSTimer.scheduledTimerWithTimeInterval(0.6, target: self, selector: "temp", userInfo: nil, repeats: false)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "segueCadastro"
+        {
+            println("segueCadastro")
+            var vc = segue.destinationViewController as RegisterViewController
 
+                println("c.delegate = self")
+                vc.delegate = self
+
+        }
+    }
+    
+    @IBAction func realizarCadastro(sender: UIButton) {
+        self.performSegueWithIdentifier("segueCadastro", sender: nil)
+    }
+
+    @IBAction func realizarLogin(sender: UIButton) {
+        self.performSegueWithIdentifier("segueLogin", sender: nil)
+    }
     /*
     // MARK: - Navigation
 

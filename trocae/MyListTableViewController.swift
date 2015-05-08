@@ -8,12 +8,15 @@
 
 import UIKit
 
-class MyListTableViewController: UITableViewController {
+class MyListTableViewController: UITableViewController, ENSideMenuDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Interesses"
+        self.sideMenuController()?.sideMenu?.delegate = self
+        self.title = "Meus Jogos"
         
+        let leftButton = UIBarButtonItem(image: UIImage(named: "menu_ico"), style: UIBarButtonItemStyle.Plain, target: self, action: "toggleSideMenuView")
+        self.navigationItem.leftBarButtonItem = leftButton
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
