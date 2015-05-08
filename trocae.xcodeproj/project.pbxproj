@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		16F518F01AF9854100CFFEF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F518EF1AF9854100CFFEF7 /* AppDelegate.swift */; };
-		16F518F21AF9854100CFFEF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F518F11AF9854100CFFEF7 /* ViewController.swift */; };
 		16F518F51AF9854100CFFEF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F31AF9854100CFFEF7 /* Main.storyboard */; };
 		16F518F71AF9854100CFFEF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F61AF9854100CFFEF7 /* Images.xcassets */; };
 		16F518FA1AF9854100CFFEF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F81AF9854100CFFEF7 /* LaunchScreen.xib */; };
@@ -17,6 +16,10 @@
 		16F519141AF9982700CFFEF7 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519121AF9982700CFFEF7 /* ENSideMenuNavigationController.swift */; };
 		16F519181AF9990C00CFFEF7 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519171AF9990C00CFFEF7 /* MenuTableViewController.swift */; };
 		16F5191A1AF99C5100CFFEF7 /* MenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519191AF99C5100CFFEF7 /* MenuNavigationController.swift */; };
+		AC536F9F1AFC29D00098ED09 /* WhishListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC536F9E1AFC29D00098ED09 /* WhishListTableViewController.swift */; };
+		AC536FA11AFC2AE20098ED09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC536FA01AFC2AE20098ED09 /* LoginViewController.swift */; };
+		AC536FA31AFC2CE90098ED09 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC536FA21AFC2CE90098ED09 /* MapViewController.swift */; };
+		AC536FA51AFC2DE00098ED09 /* MyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC536FA41AFC2DE00098ED09 /* MyListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +36,6 @@
 		16F518EA1AF9854100CFFEF7 /* trocae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trocae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F518EE1AF9854100CFFEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F518EF1AF9854100CFFEF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16F518F11AF9854100CFFEF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16F518F41AF9854100CFFEF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16F518F61AF9854100CFFEF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		16F518F91AF9854100CFFEF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -44,6 +46,10 @@
 		16F519121AF9982700CFFEF7 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		16F519171AF9990C00CFFEF7 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		16F519191AF99C5100CFFEF7 /* MenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuNavigationController.swift; sourceTree = "<group>"; };
+		AC536F9E1AFC29D00098ED09 /* WhishListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhishListTableViewController.swift; sourceTree = "<group>"; };
+		AC536FA01AFC2AE20098ED09 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AC536FA21AFC2CE90098ED09 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AC536FA41AFC2DE00098ED09 /* MyListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,9 +130,12 @@
 		16F5190F1AF997CD00CFFEF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AC536FA21AFC2CE90098ED09 /* MapViewController.swift */,
+				AC536FA01AFC2AE20098ED09 /* LoginViewController.swift */,
 				16F519171AF9990C00CFFEF7 /* MenuTableViewController.swift */,
 				16F519191AF99C5100CFFEF7 /* MenuNavigationController.swift */,
-				16F518F11AF9854100CFFEF7 /* ViewController.swift */,
+				AC536F9E1AFC29D00098ED09 /* WhishListTableViewController.swift */,
+				AC536FA41AFC2DE00098ED09 /* MyListTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -243,9 +252,12 @@
 				16F519141AF9982700CFFEF7 /* ENSideMenuNavigationController.swift in Sources */,
 				16F519181AF9990C00CFFEF7 /* MenuTableViewController.swift in Sources */,
 				16F519131AF9982700CFFEF7 /* ENSideMenu.swift in Sources */,
-				16F518F21AF9854100CFFEF7 /* ViewController.swift in Sources */,
+				AC536FA11AFC2AE20098ED09 /* LoginViewController.swift in Sources */,
 				16F5191A1AF99C5100CFFEF7 /* MenuNavigationController.swift in Sources */,
+				AC536F9F1AFC29D00098ED09 /* WhishListTableViewController.swift in Sources */,
+				AC536FA51AFC2DE00098ED09 /* MyListTableViewController.swift in Sources */,
 				16F518F01AF9854100CFFEF7 /* AppDelegate.swift in Sources */,
+				AC536FA31AFC2CE90098ED09 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +451,7 @@
 				16F5190B1AF9854100CFFEF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16F5190C1AF9854100CFFEF7 /* Build configuration list for PBXNativeTarget "trocaeTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +460,7 @@
 				16F5190E1AF9854100CFFEF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
