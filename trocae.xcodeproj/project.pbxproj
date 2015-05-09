@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		169F7EE81AFE4E5C009B2553 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169F7EE71AFE4E5C009B2553 /* Json.swift */; };
 		16DD6B461AFD07DB000193F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD6B451AFD07DB000193F5 /* MapKit.framework */; };
 		16DD6B491AFD17D6000193F5 /* GameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD6B481AFD17D5000193F5 /* GameItem.swift */; };
 		16DD6B4F1AFD2ABD000193F5 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD6B4E1AFD2ABD000193F5 /* SearchTableViewController.swift */; };
@@ -14,7 +15,6 @@
 		16F518F51AF9854100CFFEF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F31AF9854100CFFEF7 /* Main.storyboard */; };
 		16F518F71AF9854100CFFEF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F61AF9854100CFFEF7 /* Images.xcassets */; };
 		16F518FA1AF9854100CFFEF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F81AF9854100CFFEF7 /* LaunchScreen.xib */; };
-		16F519061AF9854100CFFEF7 /* trocaeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519051AF9854100CFFEF7 /* trocaeTests.swift */; };
 		16F519131AF9982700CFFEF7 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519111AF9982700CFFEF7 /* ENSideMenu.swift */; };
 		16F519141AF9982700CFFEF7 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519121AF9982700CFFEF7 /* ENSideMenuNavigationController.swift */; };
 		16F519181AF9990C00CFFEF7 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519171AF9990C00CFFEF7 /* MenuTableViewController.swift */; };
@@ -26,27 +26,17 @@
 		ACBB37CD1AFC3F6D0079622D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB37CC1AFC3F6D0079622D /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		16F519001AF9854100CFFEF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 16F518E21AF9854100CFFEF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 16F518E91AF9854100CFFEF7;
-			remoteInfo = trocae;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		169F7EE71AFE4E5C009B2553 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		16DD6B451AFD07DB000193F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		16DD6B481AFD17D5000193F5 /* GameItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameItem.swift; sourceTree = "<group>"; };
 		16DD6B4E1AFD2ABD000193F5 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		16F518EA1AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F518EA1AF9854100CFFEF7 /* trocae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trocae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F518EE1AF9854100CFFEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F518EF1AF9854100CFFEF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16F518F41AF9854100CFFEF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16F518F61AF9854100CFFEF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		16F518F91AF9854100CFFEF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		16F518FF1AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F519041AF9854100CFFEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F519051AF9854100CFFEF7 /* trocaeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trocaeTests.swift; sourceTree = "<group>"; };
 		16F519111AF9982700CFFEF7 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
@@ -69,13 +59,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16F518FC1AF9854100CFFEF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				16DD6B481AFD17D5000193F5 /* GameItem.swift */,
+				169F7EE71AFE4E5C009B2553 /* Json.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -100,8 +84,7 @@
 		16F518EB1AF9854100CFFEF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16F518EA1AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */,
-				16F518FF1AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest */,
+				16F518EA1AF9854100CFFEF7 /* trocae.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,9 +156,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		16F518E91AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename */ = {
+		16F518E91AF9854100CFFEF7 /* trocae */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 16F519091AF9854100CFFEF7 /* Build configuration list for PBXNativeTarget "trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename" */;
+			buildConfigurationList = 16F519091AF9854100CFFEF7 /* Build configuration list for PBXNativeTarget "trocae" */;
 			buildPhases = (
 				16F518E61AF9854100CFFEF7 /* Sources */,
 				16F518E71AF9854100CFFEF7 /* Frameworks */,
@@ -185,28 +168,10 @@
 			);
 			dependencies = (
 			);
-			name = trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+			name = trocae;
 			productName = trocae;
-			productReference = 16F518EA1AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */;
+			productReference = 16F518EA1AF9854100CFFEF7 /* trocae.app */;
 			productType = "com.apple.product-type.application";
-		};
-		16F518FE1AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16F5190C1AF9854100CFFEF7 /* Build configuration list for PBXNativeTarget "trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests" */;
-			buildPhases = (
-				16F518FB1AF9854100CFFEF7 /* Sources */,
-				16F518FC1AF9854100CFFEF7 /* Frameworks */,
-				16F518FD1AF9854100CFFEF7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				16F519011AF9854100CFFEF7 /* PBXTargetDependency */,
-			);
-			name = trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests;
-			productName = trocaeTests;
-			productReference = 16F518FF1AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -225,10 +190,6 @@
 							};
 						};
 					};
-					16F518FE1AF9854100CFFEF7 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 16F518E91AF9854100CFFEF7;
-					};
 				};
 			};
 			buildConfigurationList = 16F518E51AF9854100CFFEF7 /* Build configuration list for PBXProject "trocae" */;
@@ -244,8 +205,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				16F518E91AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename */,
-				16F518FE1AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests */,
+				16F518E91AF9854100CFFEF7 /* trocae */,
 			);
 		};
 /* End PBXProject section */
@@ -258,13 +218,6 @@
 				16F518F51AF9854100CFFEF7 /* Main.storyboard in Resources */,
 				16F518FA1AF9854100CFFEF7 /* LaunchScreen.xib in Resources */,
 				16F518F71AF9854100CFFEF7 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16F518FD1AF9854100CFFEF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,27 +239,12 @@
 				AC536FA51AFC2DE00098ED09 /* MyListTableViewController.swift in Sources */,
 				16DD6B4F1AFD2ABD000193F5 /* SearchTableViewController.swift in Sources */,
 				16F518F01AF9854100CFFEF7 /* AppDelegate.swift in Sources */,
+				169F7EE81AFE4E5C009B2553 /* Json.swift in Sources */,
 				AC536FA31AFC2CE90098ED09 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16F518FB1AF9854100CFFEF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				16F519061AF9854100CFFEF7 /* trocaeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		16F519011AF9854100CFFEF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 16F518E91AF9854100CFFEF7 /* trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename */;
-			targetProxy = 16F519001AF9854100CFFEF7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		16F518F31AF9854100CFFEF7 /* Main.storyboard */ = {
@@ -413,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = trocae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				PRODUCT_NAME = trocae;
 			};
 			name = Debug;
 		};
@@ -423,41 +361,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = trocae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
-			};
-			name = Release;
-		};
-		16F5190D1AF9854100CFFEF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = trocaeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/trocae.app/trocae";
-			};
-			name = Debug;
-		};
-		16F5190E1AF9854100CFFEF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = trocaeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/trocae.app/trocae";
+				PRODUCT_NAME = trocae;
 			};
 			name = Release;
 		};
@@ -473,20 +377,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		16F519091AF9854100CFFEF7 /* Build configuration list for PBXNativeTarget "trocae.temp_caseinsensitive_rename.temp_caseinsensitive_rename" */ = {
+		16F519091AF9854100CFFEF7 /* Build configuration list for PBXNativeTarget "trocae" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				16F5190A1AF9854100CFFEF7 /* Debug */,
 				16F5190B1AF9854100CFFEF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		16F5190C1AF9854100CFFEF7 /* Build configuration list for PBXNativeTarget "trocae.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				16F5190D1AF9854100CFFEF7 /* Debug */,
-				16F5190E1AF9854100CFFEF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

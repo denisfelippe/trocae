@@ -17,6 +17,10 @@ class WhishListTableViewController: UITableViewController, ENSideMenuDelegate {
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "menu_ico"), style: UIBarButtonItemStyle.Plain, target: self, action: "toggleSideMenuView")
         self.navigationItem.leftBarButtonItem = leftButton
+        
+        println("entrou aqui")
+        
+        Json(type: "games").insertGame()
         //self.navigationController.navigati
 
         // Uncomment the following line to preserve selection between presentations
