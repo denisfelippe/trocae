@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreData
+
 
 class WhishListTableViewController: UITableViewController, ENSideMenuDelegate {
 
@@ -24,6 +26,10 @@ class WhishListTableViewController: UITableViewController, ENSideMenuDelegate {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        /////recupera json()
+        /////limpa coredata()
+        /////guarda coredata json()
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,6 +49,10 @@ class WhishListTableViewController: UITableViewController, ENSideMenuDelegate {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return 0
+    }
+    
+    @IBAction func addGame(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("segueAddGameWhishList", sender: nil)
     }
 
 //    @IBAction func toggleMenu(sender: UIBarButtonItem) {

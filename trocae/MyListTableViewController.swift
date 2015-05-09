@@ -44,6 +44,9 @@ class MyListTableViewController: UITableViewController, ENSideMenuDelegate {
         return 0
     }
 
+    @IBAction func addGame(sender: UIBarButtonItem) {
+        self.performSegueWithIdentifier("segueAddGameMyList", sender: nil)
+    }
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell

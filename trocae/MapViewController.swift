@@ -38,7 +38,6 @@ class MapViewController: UIViewController, ENSideMenuDelegate, MKMapViewDelegate
         let location = locations[0] as CLLocation
         
         self.mapView.region = MKCoordinateRegionMakeWithDistance(location.coordinate, 8000, 8000)
-        println("caiu aqui")
     }
     
     

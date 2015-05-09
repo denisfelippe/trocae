@@ -12,4 +12,6 @@ struct GameItem {
     let category : String
     let name : String
     let console : String
+    let urlImage : String
+    let id : String
 }
