@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16CBC79F1B02BAB300CD03D2 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CBC79E1B02BAB300CD03D2 /* Json.swift */; };
 		16DD6B461AFD07DB000193F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD6B451AFD07DB000193F5 /* MapKit.framework */; };
 		16DD6B491AFD17D6000193F5 /* GameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD6B481AFD17D5000193F5 /* GameItem.swift */; };
 		16DD6B4F1AFD2ABD000193F5 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD6B4E1AFD2ABD000193F5 /* SearchTableViewController.swift */; };
@@ -32,10 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16CBC79E1B02BAB300CD03D2 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
 		16DD6B451AFD07DB000193F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		16DD6B481AFD17D5000193F5 /* GameItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameItem.swift; sourceTree = "<group>"; };
 		16DD6B4E1AFD2ABD000193F5 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		16F518EA1AF9854100CFFEF7 /* trocaee.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trocaee.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F518EA1AF9854100CFFEF7 /* trocae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trocae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F518EE1AF9854100CFFEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F518EF1AF9854100CFFEF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16F518F41AF9854100CFFEF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				16DD6B481AFD17D5000193F5 /* GameItem.swift */,
+				16CBC79E1B02BAB300CD03D2 /* Json.swift */,
 				AC0530E71AFE53DF008D6AD7 /* Data.swift */,
 			);
 			name = Library;
@@ -94,7 +97,7 @@
 		16F518EB1AF9854100CFFEF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				16F518EA1AF9854100CFFEF7 /* trocaee.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */,
+				16F518EA1AF9854100CFFEF7 /* trocae.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,7 +196,7 @@
 			);
 			name = trocae;
 			productName = trocae;
-			productReference = 16F518EA1AF9854100CFFEF7 /* trocaee.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */;
+			productReference = 16F518EA1AF9854100CFFEF7 /* trocae.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -264,6 +267,7 @@
 				AC0530E81AFE53DF008D6AD7 /* Data.swift in Sources */,
 				AC0530EE1AFE5C64008D6AD7 /* WhishList.swift in Sources */,
 				16F5191A1AF99C5100CFFEF7 /* MenuNavigationController.swift in Sources */,
+				16CBC79F1B02BAB300CD03D2 /* Json.swift in Sources */,
 				AC536F9F1AFC29D00098ED09 /* WhishListTableViewController.swift in Sources */,
 				AC536FA51AFC2DE00098ED09 /* MyListTableViewController.swift in Sources */,
 				16DD6B4F1AFD2ABD000193F5 /* SearchTableViewController.swift in Sources */,
@@ -379,7 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = trocae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = trocaee.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				PRODUCT_NAME = trocae;
 			};
 			name = Debug;
 		};
@@ -389,7 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = trocae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = trocaee.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				PRODUCT_NAME = trocae;
 			};
 			name = Release;
 		};
