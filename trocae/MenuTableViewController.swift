@@ -11,6 +11,8 @@ import UIKit
 class MenuTableViewController: UITableViewController {
 
     var selectedMenuItem : Int = 0
+    var titulosMenu : [String] = ["Interesses", "Meus Jogos", "Mapa", "Buscar Jogos"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +42,7 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 4
+        return titulosMenu.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -56,7 +58,7 @@ class MenuTableViewController: UITableViewController {
             cell!.selectedBackgroundView = selectedBackgroundView
         }
         
-        cell!.textLabel?.text = "ViewController #\(indexPath.row+1)"
+        cell!.textLabel?.text = titulosMenu[indexPath.row]//"ViewController #\(indexPath.row+1)"
         
         return cell!
     }
@@ -66,12 +68,7 @@ class MenuTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        println("did select row: \(indexPath.row)")
-        
-        if (indexPath.row == selectedMenuItem) {
-            return
-        }
+
         selectedMenuItem = indexPath.row
         
         //Present new view controller
@@ -79,7 +76,7 @@ class MenuTableViewController: UITableViewController {
         var destViewController : UIViewController
         switch (indexPath.row) {
         case 0:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController1") as UIViewController
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController1")as UIViewController
             break
         case 1:
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController2")as UIViewController
@@ -88,7 +85,7 @@ class MenuTableViewController: UITableViewController {
             destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController3")as UIViewController
             break
         default:
-            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("ViewController4") as UIViewController
+            destViewController = mainStoryboard.instantiateViewControllerWithIdentifier("searchViewController")as UIViewController
             break
         }
         sideMenuController()?.setContentViewController(destViewController)

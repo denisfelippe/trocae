@@ -7,43 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16CBC79F1B02BAB300CD03D2 /* Json.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CBC79E1B02BAB300CD03D2 /* Json.swift */; };
+		16DD6B461AFD07DB000193F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DD6B451AFD07DB000193F5 /* MapKit.framework */; };
+		16DD6B491AFD17D6000193F5 /* GameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD6B481AFD17D5000193F5 /* GameItem.swift */; };
+		16DD6B4F1AFD2ABD000193F5 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD6B4E1AFD2ABD000193F5 /* SearchTableViewController.swift */; };
 		16F518F01AF9854100CFFEF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F518EF1AF9854100CFFEF7 /* AppDelegate.swift */; };
-		16F518F21AF9854100CFFEF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F518F11AF9854100CFFEF7 /* ViewController.swift */; };
 		16F518F51AF9854100CFFEF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F31AF9854100CFFEF7 /* Main.storyboard */; };
 		16F518F71AF9854100CFFEF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F61AF9854100CFFEF7 /* Images.xcassets */; };
 		16F518FA1AF9854100CFFEF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16F518F81AF9854100CFFEF7 /* LaunchScreen.xib */; };
-		16F519061AF9854100CFFEF7 /* trocaeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519051AF9854100CFFEF7 /* trocaeTests.swift */; };
 		16F519131AF9982700CFFEF7 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519111AF9982700CFFEF7 /* ENSideMenu.swift */; };
 		16F519141AF9982700CFFEF7 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519121AF9982700CFFEF7 /* ENSideMenuNavigationController.swift */; };
 		16F519181AF9990C00CFFEF7 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519171AF9990C00CFFEF7 /* MenuTableViewController.swift */; };
 		16F5191A1AF99C5100CFFEF7 /* MenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F519191AF99C5100CFFEF7 /* MenuNavigationController.swift */; };
+		AC0530E61AFE44E1008D6AD7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0530E51AFE44E1008D6AD7 /* GameViewController.swift */; };
+		AC0530E81AFE53DF008D6AD7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0530E71AFE53DF008D6AD7 /* Data.swift */; };
+		AC0530EC1AFE596A008D6AD7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC0530EA1AFE596A008D6AD7 /* Model.xcdatamodeld */; };
+		AC0530EE1AFE5C64008D6AD7 /* WhishList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0530ED1AFE5C64008D6AD7 /* WhishList.swift */; };
+		AC0530F01AFE5C64008D6AD7 /* MyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0530EF1AFE5C64008D6AD7 /* MyList.swift */; };
+		AC0530F21AFE5C65008D6AD7 /* Games.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0530F11AFE5C65008D6AD7 /* Games.swift */; };
+		AC536F9F1AFC29D00098ED09 /* WhishListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC536F9E1AFC29D00098ED09 /* WhishListTableViewController.swift */; };
+		AC536FA11AFC2AE20098ED09 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC536FA01AFC2AE20098ED09 /* LoginViewController.swift */; };
+		AC536FA31AFC2CE90098ED09 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC536FA21AFC2CE90098ED09 /* MapViewController.swift */; };
+		AC536FA51AFC2DE00098ED09 /* MyListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC536FA41AFC2DE00098ED09 /* MyListTableViewController.swift */; };
+		ACBB37CD1AFC3F6D0079622D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBB37CC1AFC3F6D0079622D /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		16F519001AF9854100CFFEF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 16F518E21AF9854100CFFEF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 16F518E91AF9854100CFFEF7;
-			remoteInfo = trocae;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		16CBC79E1B02BAB300CD03D2 /* Json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json.swift; sourceTree = "<group>"; };
+		16DD6B451AFD07DB000193F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		16DD6B481AFD17D5000193F5 /* GameItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameItem.swift; sourceTree = "<group>"; };
+		16DD6B4E1AFD2ABD000193F5 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		16F518EA1AF9854100CFFEF7 /* trocae.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = trocae.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F518EE1AF9854100CFFEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F518EF1AF9854100CFFEF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16F518F11AF9854100CFFEF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16F518F41AF9854100CFFEF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16F518F61AF9854100CFFEF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		16F518F91AF9854100CFFEF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		16F518FF1AF9854100CFFEF7 /* trocaeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = trocaeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16F519041AF9854100CFFEF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16F519051AF9854100CFFEF7 /* trocaeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = trocaeTests.swift; sourceTree = "<group>"; };
 		16F519111AF9982700CFFEF7 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
 		16F519121AF9982700CFFEF7 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		16F519171AF9990C00CFFEF7 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		16F519191AF99C5100CFFEF7 /* MenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuNavigationController.swift; sourceTree = "<group>"; };
+		AC0530E51AFE44E1008D6AD7 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		AC0530E71AFE53DF008D6AD7 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		AC0530EB1AFE596A008D6AD7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AC0530ED1AFE5C64008D6AD7 /* WhishList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhishList.swift; sourceTree = "<group>"; };
+		AC0530EF1AFE5C64008D6AD7 /* MyList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyList.swift; sourceTree = "<group>"; };
+		AC0530F11AFE5C65008D6AD7 /* Games.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Games.swift; sourceTree = "<group>"; };
+		AC536F9E1AFC29D00098ED09 /* WhishListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhishListTableViewController.swift; sourceTree = "<group>"; };
+		AC536FA01AFC2AE20098ED09 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AC536FA21AFC2CE90098ED09 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AC536FA41AFC2DE00098ED09 /* MyListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListTableViewController.swift; sourceTree = "<group>"; };
+		ACBB37CC1AFC3F6D0079622D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,22 +67,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16F518FC1AF9854100CFFEF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				16DD6B461AFD07DB000193F5 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		16DD6B471AFD17B4000193F5 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				16DD6B481AFD17D5000193F5 /* GameItem.swift */,
+				16CBC79E1B02BAB300CD03D2 /* Json.swift */,
+				AC0530E71AFE53DF008D6AD7 /* Data.swift */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
 		16F518E11AF9854100CFFEF7 = {
 			isa = PBXGroup;
 			children = (
+				16DD6B451AFD07DB000193F5 /* MapKit.framework */,
 				16F518EC1AF9854100CFFEF7 /* trocae */,
 				16F519021AF9854100CFFEF7 /* trocaeTests */,
 				16F518EB1AF9854100CFFEF7 /* Products */,
@@ -77,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				16F518EA1AF9854100CFFEF7 /* trocae.app */,
-				16F518FF1AF9854100CFFEF7 /* trocaeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,7 +105,9 @@
 		16F518EC1AF9854100CFFEF7 /* trocae */ = {
 			isa = PBXGroup;
 			children = (
-				16F519101AF997ED00CFFEF7 /* Library */,
+				AC0530E91AFE5925008D6AD7 /* Data */,
+				16DD6B471AFD17B4000193F5 /* Library */,
+				16F519101AF997ED00CFFEF7 /* ExternalLibrary */,
 				16F5190F1AF997CD00CFFEF7 /* Controllers */,
 				16F518EF1AF9854100CFFEF7 /* AppDelegate.swift */,
 				16F518F31AF9854100CFFEF7 /* Main.storyboard */,
@@ -124,20 +146,37 @@
 		16F5190F1AF997CD00CFFEF7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AC536FA21AFC2CE90098ED09 /* MapViewController.swift */,
+				16DD6B4E1AFD2ABD000193F5 /* SearchTableViewController.swift */,
+				AC536FA01AFC2AE20098ED09 /* LoginViewController.swift */,
 				16F519171AF9990C00CFFEF7 /* MenuTableViewController.swift */,
 				16F519191AF99C5100CFFEF7 /* MenuNavigationController.swift */,
-				16F518F11AF9854100CFFEF7 /* ViewController.swift */,
+				AC536F9E1AFC29D00098ED09 /* WhishListTableViewController.swift */,
+				AC536FA41AFC2DE00098ED09 /* MyListTableViewController.swift */,
+				ACBB37CC1AFC3F6D0079622D /* RegisterViewController.swift */,
+				AC0530E51AFE44E1008D6AD7 /* GameViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		16F519101AF997ED00CFFEF7 /* Library */ = {
+		16F519101AF997ED00CFFEF7 /* ExternalLibrary */ = {
 			isa = PBXGroup;
 			children = (
 				16F519111AF9982700CFFEF7 /* ENSideMenu.swift */,
 				16F519121AF9982700CFFEF7 /* ENSideMenuNavigationController.swift */,
 			);
-			name = Library;
+			name = ExternalLibrary;
+			sourceTree = "<group>";
+		};
+		AC0530E91AFE5925008D6AD7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AC0530EA1AFE596A008D6AD7 /* Model.xcdatamodeld */,
+				AC0530F11AFE5C65008D6AD7 /* Games.swift */,
+				AC0530EF1AFE5C64008D6AD7 /* MyList.swift */,
+				AC0530ED1AFE5C64008D6AD7 /* WhishList.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,24 +199,6 @@
 			productReference = 16F518EA1AF9854100CFFEF7 /* trocae.app */;
 			productType = "com.apple.product-type.application";
 		};
-		16F518FE1AF9854100CFFEF7 /* trocaeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 16F5190C1AF9854100CFFEF7 /* Build configuration list for PBXNativeTarget "trocaeTests" */;
-			buildPhases = (
-				16F518FB1AF9854100CFFEF7 /* Sources */,
-				16F518FC1AF9854100CFFEF7 /* Frameworks */,
-				16F518FD1AF9854100CFFEF7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				16F519011AF9854100CFFEF7 /* PBXTargetDependency */,
-			);
-			name = trocaeTests;
-			productName = trocaeTests;
-			productReference = 16F518FF1AF9854100CFFEF7 /* trocaeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,10 +210,11 @@
 				TargetAttributes = {
 					16F518E91AF9854100CFFEF7 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					16F518FE1AF9854100CFFEF7 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 16F518E91AF9854100CFFEF7;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -210,7 +232,6 @@
 			projectRoot = "";
 			targets = (
 				16F518E91AF9854100CFFEF7 /* trocae */,
-				16F518FE1AF9854100CFFEF7 /* trocaeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -226,13 +247,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		16F518FD1AF9854100CFFEF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -241,31 +255,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				16F519141AF9982700CFFEF7 /* ENSideMenuNavigationController.swift in Sources */,
+				16DD6B491AFD17D6000193F5 /* GameItem.swift in Sources */,
+				AC0530F01AFE5C64008D6AD7 /* MyList.swift in Sources */,
+				AC0530F21AFE5C65008D6AD7 /* Games.swift in Sources */,
+				AC0530EC1AFE596A008D6AD7 /* Model.xcdatamodeld in Sources */,
+				ACBB37CD1AFC3F6D0079622D /* RegisterViewController.swift in Sources */,
 				16F519181AF9990C00CFFEF7 /* MenuTableViewController.swift in Sources */,
+				AC0530E61AFE44E1008D6AD7 /* GameViewController.swift in Sources */,
 				16F519131AF9982700CFFEF7 /* ENSideMenu.swift in Sources */,
-				16F518F21AF9854100CFFEF7 /* ViewController.swift in Sources */,
+				AC536FA11AFC2AE20098ED09 /* LoginViewController.swift in Sources */,
+				AC0530E81AFE53DF008D6AD7 /* Data.swift in Sources */,
+				AC0530EE1AFE5C64008D6AD7 /* WhishList.swift in Sources */,
 				16F5191A1AF99C5100CFFEF7 /* MenuNavigationController.swift in Sources */,
+				16CBC79F1B02BAB300CD03D2 /* Json.swift in Sources */,
+				AC536F9F1AFC29D00098ED09 /* WhishListTableViewController.swift in Sources */,
+				AC536FA51AFC2DE00098ED09 /* MyListTableViewController.swift in Sources */,
+				16DD6B4F1AFD2ABD000193F5 /* SearchTableViewController.swift in Sources */,
 				16F518F01AF9854100CFFEF7 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		16F518FB1AF9854100CFFEF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				16F519061AF9854100CFFEF7 /* trocaeTests.swift in Sources */,
+				AC536FA31AFC2CE90098ED09 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		16F519011AF9854100CFFEF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 16F518E91AF9854100CFFEF7 /* trocae */;
-			targetProxy = 16F519001AF9854100CFFEF7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		16F518F31AF9854100CFFEF7 /* Main.storyboard */ = {
@@ -372,7 +383,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = trocae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = trocae;
 			};
 			name = Debug;
 		};
@@ -382,41 +393,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = trocae/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		16F5190D1AF9854100CFFEF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = trocaeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/trocae.app/trocae";
-			};
-			name = Debug;
-		};
-		16F5190E1AF9854100CFFEF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = trocaeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/trocae.app/trocae";
+				PRODUCT_NAME = trocae;
 			};
 			name = Release;
 		};
@@ -439,16 +416,22 @@
 				16F5190B1AF9854100CFFEF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		16F5190C1AF9854100CFFEF7 /* Build configuration list for PBXNativeTarget "trocaeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				16F5190D1AF9854100CFFEF7 /* Debug */,
-				16F5190E1AF9854100CFFEF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC0530EA1AFE596A008D6AD7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC0530EB1AFE596A008D6AD7 /* Model.xcdatamodel */,
+			);
+			currentVersion = AC0530EB1AFE596A008D6AD7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 16F518E21AF9854100CFFEF7 /* Project object */;
 }

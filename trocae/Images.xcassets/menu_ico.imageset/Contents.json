@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "trocae.png"
+      "filename" : "menu@1x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "trocae@2x.png"
+      "filename" : "menu@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "trocae@3x.png"
+      "filename" : "menu@3.png"
     }
   ],
   "info" : {
