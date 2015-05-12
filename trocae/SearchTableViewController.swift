@@ -43,7 +43,7 @@ class SearchTableViewController: UITableViewController, ENSideMenuDelegate, UISe
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //ask for a reusable cell from the tableview, the tableview will create a new one if it doesn't have any
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cellSearch") as UITableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cellSearch") as! UITableViewCell
         
         var game : GameItem
         // Check to see whether the normal table or search results table is being displayed and set the Game object from the appropriate array
@@ -69,16 +69,16 @@ class SearchTableViewController: UITableViewController, ENSideMenuDelegate, UISe
         })
     }
     
-    func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
-        let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+    func searchDisplayController(controller: UISearchDisplayController, shouldReloadTableForSearchString searchString: String!) -> Bool {
+        let scopes = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
         let selectedScope = scopes[self.searchDisplayController!.searchBar.selectedScopeButtonIndex] as String
         self.filterContentForSearchText(searchString, scope: selectedScope)
         return true
     }
     
-    func searchDisplayController(controller: UISearchDisplayController!,
+    func searchDisplayController(controller: UISearchDisplayController,
         shouldReloadTableForSearchScope searchOption: Int) -> Bool {
-            let scope = self.searchDisplayController!.searchBar.scopeButtonTitles as [String]
+            let scope = self.searchDisplayController!.searchBar.scopeButtonTitles as! [String]
             self.filterContentForSearchText(self.searchDisplayController!.searchBar.text, scope: scope[searchOption])
             return true
     }
@@ -91,9 +91,9 @@ class SearchTableViewController: UITableViewController, ENSideMenuDelegate, UISe
         var game:GameItem
         
         if segue.identifier == "gameDetail" {
-            let gameDetailViewController = segue.destinationViewController as GameViewController
+            let gameDetailViewController = segue.destinationViewController as! GameViewController
             
-            if sender as UITableView == self.searchDisplayController!.searchResultsTableView {
+            if sender as! UITableView == self.searchDisplayController!.searchResultsTableView {
                 let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow()!
                 game = self.filteredGames[indexPath.row]
             } else {

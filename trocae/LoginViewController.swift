@@ -41,7 +41,7 @@ class LoginViewController: UIViewController, RegisterViewControllerDelegate {
         if segue.identifier == "segueCadastro"
         {
             println("segueCadastro")
-            var vc = segue.destinationViewController as RegisterViewController
+            var vc = segue.destinationViewController as! RegisterViewController
 
                 println("c.delegate = self")
                 vc.delegate = self

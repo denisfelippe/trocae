@@ -60,7 +60,7 @@ class Json: NSObject {
                             game["id"] = id
                         }
                         
-                        self.games += [GameItem(category:game["category"] as String, name:game["name"] as String, console:game["console"] as String, urlImage:game["urlImage"] as String, id:game["id"] as String)]
+                        self.games += [GameItem(category:game["category"] as! String, name:game["name"] as! String, console:game["console"] as! String, urlImage:game["urlImage"] as! String, id:game["id"] as! String)]
                         
                         switch (self.type) {
                             case "my_list":

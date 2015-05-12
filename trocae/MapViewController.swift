@@ -35,7 +35,7 @@ class MapViewController: UIViewController, ENSideMenuDelegate, MKMapViewDelegate
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        let location = locations[0] as CLLocation
+        let location = locations[0] as! CLLocation
         
         self.mapView.region = MKCoordinateRegionMakeWithDistance(location.coordinate, 8000, 8000)
     }

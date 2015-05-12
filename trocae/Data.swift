@@ -175,7 +175,7 @@ class Data: NSObject, NSFetchedResultsControllerDelegate {
         
         //pegar o caminho para a pasta documents do sistema
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
-        let applicationDocumentsDirectory = urls.last as NSURL
+        let applicationDocumentsDirectory = urls.last as! NSURL
         
         //Criar uma url do caminho da pasta documents + o nome do arquivo de banco de dados
         let url = applicationDocumentsDirectory.URLByAppendingPathComponent("Model.sqlite")
