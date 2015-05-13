@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchTableViewController: UITableViewController, ENSideMenuDelegate, UISearchBarDelegate {
+class SearchTableViewController: UITableViewController, ENSideMenuDelegate, UISearchBarDelegate, JsonDelegate {
     
     var searchActive : Bool = false
     var games = [GameItem]()
@@ -20,18 +20,26 @@ class SearchTableViewController: UITableViewController, ENSideMenuDelegate, UISe
         self.title = "Buscar Jogos"
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "menu_ico"), style: UIBarButtonItemStyle.Plain, target: self, action: "toggleSideMenuView")
-        self.navigationItem.leftBarButtonItem = leftButton        
+        self.navigationItem.leftBarButtonItem = leftButton
         
-        self.games = [GameItem(category:"PS3/PS4", name:"God of War 3", console:"PS3", urlImage: "http://cdn.trocajogo.net/files/gameplataforma/capa/20100712153603_ps3-god-of-war-3.jpg", id: "1"),
-            GameItem(category:"PS3/PS4", name:"Call of Dutty Ghosts", console:"PS3", urlImage: "http://cdn.trocajogo.net/files/gameplataforma/capa/20131105173807_ps3_call-of-duty-ghosts.jpg", id: "2"),
-            GameItem(category:"Xbox", name:"Forza Horizon 2", console:"Xbox One", urlImage: "", id: "3"),
-            GameItem(category:"Xbox", name:"Darksiders", console:"Xbox 360", urlImage: "", id: "4"),
-            GameItem(category:"Other", name:"Mario Kart 8", console:"Wii", urlImage: "", id: "5"),
-            GameItem(category:"Other", name:"Mario U", console:"Wii U", urlImage: "", id: "6"),
-            GameItem(category:"Other", name:"The SIMS 4", console:"PC", urlImage: "", id: "7")]
+        var json: Json = Json(type: "games")
+        json.delegate = self
+        // recupera dados do json e grava no core data
+        json.insertGame()
         
         // Reload the table
         self.tableView.reloadData()
+    }
+    
+    func atualizaTabela()
+    {
+        println("Atualizando tabela")
+        
+        // Consulta do banco
+        var data: Data = Data()
+        games = data.recGames()
+        
+        tableView.reloadData()
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {

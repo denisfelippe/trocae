@@ -30,15 +30,11 @@ class Data: NSObject, NSFetchedResultsControllerDelegate {
     {
         var games = [GameItem]()
     
-        for tempGames in fetchedResultControllerGames.fetchedObjects!
+        for gm in fetchedResultControllerGames.fetchedObjects!  as! [Games]
         {
-            if let gm = tempGames as? Games
-            {
-                println("adicionando Games")
-                var gameItem: GameItem
-                gameItem = GameItem(category:gm.category, name:gm.name, console:gm.console, urlImage: gm.image, id: gm.id)
-                games.append(gameItem)
-            }
+            var gameItem: GameItem
+            gameItem = GameItem(category:gm.category, name:gm.name, console:gm.console, urlImage: gm.image, id: gm.id)
+            games.append(gameItem)
         }
         
         return games
@@ -50,7 +46,6 @@ class Data: NSObject, NSFetchedResultsControllerDelegate {
         
         for ml in fetchedResultControllerMyList.fetchedObjects! as! [MyList]
         {
-            println("adicionando My List")
             var gameItem: GameItem
             gameItem = GameItem(category:ml.category, name:ml.name, console:ml.console, urlImage: ml.image, id: ml.id)
             myList.append(gameItem)
