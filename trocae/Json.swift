@@ -7,16 +7,23 @@
 //
 
 import UIKit
+
+protocol JsonDelegate:class{
+    
+    func atualizaTabela()
+}
 class Json: NSObject {
     let session: NSURLSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     var games = [GameItem]()
     var type:String
     var url:NSURL
     var endpoints = [
-        "games": "http://localhost/games.json",
-        "wish_list": "http://localhost/games-wishlist.json",
-        "my_list": "http://localhost/games-mylist.json"
+        "games": "file:///Users/Guest/Documents/games.json",
+        "wish_list": "file:///Users/Guest/Documents/games-wishlist.json",
+        "my_list": "file:///Users/Guest/Documents/games-mylist.json"
     ]
+    
+    weak var delegate: JsonDelegate?
     
     init(type: String) {
         self.type = type
@@ -25,16 +32,18 @@ class Json: NSObject {
     
     func insertGame() {
         println("entrou insert")
-        var pontoTuristico = session.dataTaskWithURL(self.url, completionHandler: {
+        
+        var coreData: Data = Data()
+        
+        var games = session.dataTaskWithURL(self.url, completionHandler: {
             (data: NSData!, response:NSURLResponse!, error: NSError!) -> Void in
-            println("entrou ponto")
             println(self.url)
-            println(self.getContent(data))
             if let rows = self.getContent(data) as? [AnyObject] {
                 dispatch_async(dispatch_get_main_queue() , {
                     for gamesJson in rows {
                         
-                        var game = ["name": "(vazio)", "category": "(vazio)", "console": 0]
+//                        var game = ["name": "(vazio)", "category": "(vazio)", "console": 0]
+                        var game = [String: AnyObject]()
                         
                         if let console: String = gamesJson["console"] as? String {
                             game["console"] = console
@@ -48,37 +57,35 @@ class Json: NSObject {
                             game["category"] = category
                         }
                         
-                        if let category: String = gamesJson["category"] as? String {
-                            game["category"] = category
-                        }
-                        
                         if let image: String = gamesJson["image"] as? String {
                             game["urlImage"] = image
                         }
                         
-                        if let id: String = gamesJson["id"] as? String {
+                        if let id: String = gamesJson["_id"] as? String {
                             game["id"] = id
                         }
                         
-                        self.games += [GameItem(category:game["category"] as! String, name:game["name"] as! String, console:game["console"] as! String, urlImage:game["urlImage"] as! String, id:game["id"] as! String)]
+                        var gameItem = GameItem(category:game["category"] as! String, name:game["name"] as! String, console:game["console"] as! String, urlImage:game["urlImage"] as! String, id:game["id"] as! String)
                         
                         switch (self.type) {
                             case "my_list":
-                                //insere na tabela my list
+                                coreData.addMyList(gameItem)
                                 break
                             case "wish_list":
-                                //insere na tabela wish list
+                                coreData.addWhishList(gameItem)
                                 break
                             default:
-                                //insere na tabela games
+                                coreData.addGame(gameItem)
                                 break
                         }
+                        
                     }
+                    self.delegate?.atualizaTabela()
                 })
             }
         })
         
-        pontoTuristico.resume()
+        games.resume()
     }
     
     func getContent(data: NSData) -> AnyObject {

@@ -10,8 +10,10 @@ import UIKit
 import CoreData
 
 
-class WhishListTableViewController: UITableViewController, ENSideMenuDelegate {
+class WhishListTableViewController: UITableViewController, ENSideMenuDelegate, JsonDelegate {
 
+    var whishList = [GameItem]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenuController()?.sideMenu?.delegate = self
@@ -19,17 +21,15 @@ class WhishListTableViewController: UITableViewController, ENSideMenuDelegate {
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "menu_ico"), style: UIBarButtonItemStyle.Plain, target: self, action: "toggleSideMenuView")
         self.navigationItem.leftBarButtonItem = leftButton
-        //self.navigationController.navigati
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        /////recupera json()
-        /////limpa coredata()
-        /////guarda coredata json()
+        // limpa os dados da base
+        var data: Data = Data()
+        data.limpaWhishList()
+
+        var json: Json = Json(type: "wish_list")
+        json.delegate = self
+        // recupera dados do json e grava no core data
+        json.insertGame()
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,13 +42,14 @@ class WhishListTableViewController: UITableViewController, ENSideMenuDelegate {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return whishList.count
+
     }
     
     @IBAction func addGame(sender: UIBarButtonItem) {
@@ -60,15 +61,27 @@ class WhishListTableViewController: UITableViewController, ENSideMenuDelegate {
 //    }
     
     
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("wishListIdentifier", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
 
+        cell.textLabel?.text = whishList[indexPath.row].name
         return cell
     }
-    */
+    
+    func atualizaTabela()
+    {
+        println("Atualizando tabela")
+        
+        // Consulta do banco
+        var data: Data = Data()
+        whishList = data.recWhishList()
+
+        tableView.reloadData()
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

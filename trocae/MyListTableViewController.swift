@@ -8,8 +8,10 @@
 
 import UIKit
 
-class MyListTableViewController: UITableViewController, ENSideMenuDelegate {
+class MyListTableViewController: UITableViewController, ENSideMenuDelegate, JsonDelegate {
 
+    var myList = [GameItem]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sideMenuController()?.sideMenu?.delegate = self
@@ -18,11 +20,14 @@ class MyListTableViewController: UITableViewController, ENSideMenuDelegate {
         let leftButton = UIBarButtonItem(image: UIImage(named: "menu_ico"), style: UIBarButtonItemStyle.Plain, target: self, action: "toggleSideMenuView")
         self.navigationItem.leftBarButtonItem = leftButton
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        // limpa os dados da base
+        var data: Data = Data()
+        data.limpaMyList()
+        
+        var json: Json = Json(type: "my_list")
+        json.delegate = self
+        // recupera dados do json e grava no core data
+        json.insertGame()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,27 +40,41 @@ class MyListTableViewController: UITableViewController, ENSideMenuDelegate {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        println(myList.count)
+        return myList.count
     }
 
     @IBAction func addGame(sender: UIBarButtonItem) {
         self.performSegueWithIdentifier("segueAddGameMyList", sender: nil)
     }
-    /*
+    
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("myListIdentifier", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
 
+        cell.textLabel?.text = myList[indexPath.row].name
         return cell
     }
-    */
+    
+    func atualizaTabela()
+    {
+        println("Atualizando tabela")
+        
+        // Consulta do banco
+        var data: Data = Data()
+        myList = data.recMyList()
+        
+        tableView.reloadData()
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

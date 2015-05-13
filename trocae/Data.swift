@@ -48,15 +48,13 @@ class Data: NSObject, NSFetchedResultsControllerDelegate {
     {
         var myList = [GameItem]()
         
-        for tempMyList in fetchedResultControllerMyList.fetchedObjects!
+        for ml in fetchedResultControllerMyList.fetchedObjects! as! [MyList]
         {
-            if let ml = tempMyList as? Games
-            {
-                println("adicionando My List")
-                var gameItem: GameItem
-                gameItem = GameItem(category:ml.category, name:ml.name, console:ml.console, urlImage: ml.image, id: ml.id)
-                myList.append(gameItem)
-            }
+            println("adicionando My List")
+            var gameItem: GameItem
+            gameItem = GameItem(category:ml.category, name:ml.name, console:ml.console, urlImage: ml.image, id: ml.id)
+            myList.append(gameItem)
+
         }
         
         return myList
@@ -66,15 +64,11 @@ class Data: NSObject, NSFetchedResultsControllerDelegate {
     {
         var whishList = [GameItem]()
         
-        for tempWhishList in fetchedResultControllerWhishList.fetchedObjects!
+        for wl in fetchedResultControllerWhishList.fetchedObjects! as! [WhishList]
         {
-            if let wl = tempWhishList as? Games
-            {
-                println("adicionando WhishList")
-                var gameItem: GameItem
-                gameItem = GameItem(category:wl.category, name:wl.name, console:wl.console, urlImage: wl.image, id: wl.id)
-                whishList.append(gameItem)
-            }
+            var gameItem: GameItem
+            gameItem = GameItem(category:wl.category, name:wl.name, console:wl.console, urlImage: wl.image, id: wl.id)
+            whishList.append(gameItem)
         }
         
         return whishList
@@ -93,7 +87,6 @@ class Data: NSObject, NSFetchedResultsControllerDelegate {
         {
             if let ml = myList as? MyList
             {
-                println("deletando My List")
                 managedObjectContext?.deleteObject(ml)
             }
         }
@@ -104,9 +97,8 @@ class Data: NSObject, NSFetchedResultsControllerDelegate {
     {
         for whishList in fetchedResultControllerWhishList.fetchedObjects!
         {
-            if let wl = whishList as? MyList
+            if let wl = whishList as? WhishList
             {
-                println("deletando WhishList")
                 managedObjectContext?.deleteObject(wl)
             }
         }
@@ -144,8 +136,28 @@ class Data: NSObject, NSFetchedResultsControllerDelegate {
         managedObjectContext!.save(nil)
     }
     
+    func addGame(item: GameItem)
+    {
+        //criar variavel para referenciar a tabela task
+        let entityDescritption = NSEntityDescription.entityForName("Games", inManagedObjectContext: managedObjectContext!)
+        
+        //criar um "game", associando com a entidade correta e colocar no contexto
+        var game = Games(entity: entityDescritption!, insertIntoManagedObjectContext: managedObjectContext)
+        
+        game.id = item.id
+        game.name = item.name
+        game.image = item.urlImage
+        game.console = item.console
+        game.category = item.category
+        
+        //salvar alteracao no banco
+        managedObjectContext!.save(nil)
+    }
+    
     func addWhishList(item : GameItem)
     {
+        println("entrou addwish")
+        
         //criar variavel para referenciar a tabela task
         let entityDescritption = NSEntityDescription.entityForName("WhishList", inManagedObjectContext: managedObjectContext!)
         
@@ -206,6 +218,10 @@ class Data: NSObject, NSFetchedResultsControllerDelegate {
         //primeiro inicializamos um FetchRequest com dados da tabela Task
         let fetchRequest = NSFetchRequest(entityName: "MyList")
         
+        // ordenando os dados pelo campo nome
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
         //com o FetchRequest acima definido e sem opcoes de cache
         fetchedResultControllerMyList = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -221,20 +237,27 @@ class Data: NSObject, NSFetchedResultsControllerDelegate {
         //primeiro inicializamos um FetchRequest com dados da tabela Task
         let fetchRequest = NSFetchRequest(entityName: "WhishList")
         
+        // ordenando os dados pelo campo nome
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
         //com o FetchRequest acima definido e sem opcoes de cache
         fetchedResultControllerWhishList = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
         
         //a controler será o delegate do fetch
-        fetchedResultControllerWhishList.delegate = self
+        //fetchedResultControllerWhishList.delegate = self
         
         //executa o fetch
         fetchedResultControllerWhishList.performFetch(nil)
-        
     }
     
     private func getFetchedResultControllerGames() {
         //primeiro inicializamos um FetchRequest com dados da tabela Task
         let fetchRequest = NSFetchRequest(entityName: "Games")
+        
+        // ordenando os dados pelo campo nome
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
         
         //com o FetchRequest acima definido e sem opcoes de cache
         fetchedResultControllerGames = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext!, sectionNameKeyPath: nil, cacheName: nil)
