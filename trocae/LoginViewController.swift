@@ -10,9 +10,11 @@ import UIKit
 
 class LoginViewController: UIViewController, RegisterViewControllerDelegate {
 
+    @IBOutlet weak var btnEntrar: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        btnEntrar.layer.cornerRadius = 5
         
         // Do any additional setup after loading the view.
     }

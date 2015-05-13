@@ -10,10 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController {
     
-    var idGame = ""
-    var urlImagem = ""
-    var tituloGame = ""
-    var plataforma = ""
+    var game : GameItem!
     
     @IBOutlet weak var imgGame: UIImageView!
     @IBOutlet weak var lblTituloGame: UILabel!
@@ -21,10 +18,10 @@ class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        lblTituloGame.text = tituloGame
-        lblPlataforma.text = plataforma
+        lblTituloGame.text = game.name
+        lblPlataforma.text = game.console
         
-        downloadImage(urlImagem)
+        downloadImage(game.urlImage)
         
         // Do any additional setup after loading the view.
     }

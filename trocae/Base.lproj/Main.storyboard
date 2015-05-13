@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,31 +25,51 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="62G-2u-Xig">
-                                <rect key="frame" x="189" y="194" width="222" height="30"/>
+                                <rect key="frame" x="16" y="185" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="g2k-Kg-5OH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-7I-3MT">
-                                <rect key="frame" x="189" y="165" width="43" height="21"/>
+                                <rect key="frame" x="16" y="156" width="43" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unp-5K-xh3">
-                                <rect key="frame" x="189" y="242" width="49" height="21"/>
+                                <rect key="frame" x="16" y="235" width="49" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQx-Rm-emr">
-                                <rect key="frame" x="189" y="271" width="222" height="30"/>
+                                <rect key="frame" x="16" y="264" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6vh-kB-OVP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N9-yl-HOp">
-                                <rect key="frame" x="258" y="383" width="84" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eB-8j-C5e">
+                                <rect key="frame" x="16" y="302" width="568" height="40"/>
+                                <color key="backgroundColor" red="0.55294120311737061" green="0.90980398654937744" blue="0.73333334922790527" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="a7S-h3-thq"/>
+                                    <constraint firstAttribute="height" constant="40" id="Vt8-s6-TW1"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Entrar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="realizarLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPb-aE-29S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9N9-yl-HOp">
+                                <rect key="frame" x="16" y="370" width="568" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Tjo-fx-Jaa"/>
                                 </constraints>
                                 <state key="normal" title="Cadastrar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,38 +78,31 @@
                                     <action selector="realizarCadastro:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lLS-Kw-UKi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9eB-8j-C5e">
-                                <rect key="frame" x="189" y="309" width="222" height="30"/>
-                                <state key="normal" title="Entrar">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="realizarLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPb-aE-29S"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="I2a-7I-3MT" firstAttribute="top" secondItem="nhi-7b-s49" secondAttribute="bottom" constant="16" id="3l6-2z-6ep"/>
-                            <constraint firstItem="9eB-8j-C5e" firstAttribute="leading" secondItem="tQx-Rm-emr" secondAttribute="leading" id="7PV-Wh-KGc"/>
-                            <constraint firstItem="unp-5K-xh3" firstAttribute="top" secondItem="62G-2u-Xig" secondAttribute="bottom" constant="18" id="F9O-a3-LfG"/>
-                            <constraint firstItem="nhi-7b-s49" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GbQ-RM-VK1"/>
-                            <constraint firstItem="I2a-7I-3MT" firstAttribute="leading" secondItem="62G-2u-Xig" secondAttribute="leading" id="KBO-3z-BKo"/>
-                            <constraint firstItem="62G-2u-Xig" firstAttribute="trailing" secondItem="nhi-7b-s49" secondAttribute="trailing" id="R1N-63-frR"/>
-                            <constraint firstItem="9eB-8j-C5e" firstAttribute="trailing" secondItem="tQx-Rm-emr" secondAttribute="trailing" id="R9l-LB-KBg"/>
-                            <constraint firstItem="9N9-yl-HOp" firstAttribute="centerX" secondItem="9eB-8j-C5e" secondAttribute="centerX" id="XC8-NS-u7N"/>
-                            <constraint firstItem="9eB-8j-C5e" firstAttribute="top" secondItem="tQx-Rm-emr" secondAttribute="bottom" constant="8" symbolic="YES" id="YZG-Pl-AKH"/>
-                            <constraint firstItem="62G-2u-Xig" firstAttribute="top" secondItem="I2a-7I-3MT" secondAttribute="bottom" constant="8" symbolic="YES" id="cix-4x-Xay"/>
-                            <constraint firstItem="62G-2u-Xig" firstAttribute="trailing" secondItem="tQx-Rm-emr" secondAttribute="trailing" id="eGV-J8-5NV"/>
-                            <constraint firstItem="I2a-7I-3MT" firstAttribute="leading" secondItem="nhi-7b-s49" secondAttribute="leading" id="eW3-Qz-Pda"/>
-                            <constraint firstItem="tQx-Rm-emr" firstAttribute="leading" secondItem="unp-5K-xh3" secondAttribute="leading" id="iVb-Ov-0rs"/>
-                            <constraint firstItem="9N9-yl-HOp" firstAttribute="top" secondItem="9eB-8j-C5e" secondAttribute="bottom" constant="44" id="jyL-d7-meI"/>
-                            <constraint firstItem="tQx-Rm-emr" firstAttribute="top" secondItem="unp-5K-xh3" secondAttribute="bottom" constant="8" symbolic="YES" id="lGC-Go-6qf"/>
-                            <constraint firstItem="nhi-7b-s49" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yGg-l1-Epy"/>
-                            <constraint firstItem="unp-5K-xh3" firstAttribute="leading" secondItem="62G-2u-Xig" secondAttribute="leading" id="ymU-l8-rSZ"/>
+                            <constraint firstItem="62G-2u-Xig" firstAttribute="top" secondItem="I2a-7I-3MT" secondAttribute="bottom" constant="8" symbolic="YES" id="2Ov-A4-TO6"/>
+                            <constraint firstItem="nhi-7b-s49" firstAttribute="centerX" secondItem="62G-2u-Xig" secondAttribute="centerX" id="5BS-Ag-iCo"/>
+                            <constraint firstItem="62G-2u-Xig" firstAttribute="top" secondItem="nhi-7b-s49" secondAttribute="bottom" constant="36" id="5RX-sX-SDu"/>
+                            <constraint firstItem="9eB-8j-C5e" firstAttribute="top" secondItem="tQx-Rm-emr" secondAttribute="bottom" constant="8" symbolic="YES" id="7Cc-x6-uN6"/>
+                            <constraint firstItem="9eB-8j-C5e" firstAttribute="leading" secondItem="tQx-Rm-emr" secondAttribute="leading" id="AXh-GP-PUX"/>
+                            <constraint firstItem="9eB-8j-C5e" firstAttribute="trailing" secondItem="9N9-yl-HOp" secondAttribute="trailing" id="Dhc-UK-k0G"/>
+                            <constraint firstItem="tQx-Rm-emr" firstAttribute="top" secondItem="unp-5K-xh3" secondAttribute="bottom" constant="8" symbolic="YES" id="RaR-di-PTP"/>
+                            <constraint firstItem="unp-5K-xh3" firstAttribute="leading" secondItem="tQx-Rm-emr" secondAttribute="leading" id="WQi-JZ-4fb"/>
+                            <constraint firstItem="9N9-yl-HOp" firstAttribute="leading" secondItem="9eB-8j-C5e" secondAttribute="leading" id="aX0-m3-blf"/>
+                            <constraint firstItem="tQx-Rm-emr" firstAttribute="trailing" secondItem="9eB-8j-C5e" secondAttribute="trailing" id="cVi-ic-7My"/>
+                            <constraint firstItem="I2a-7I-3MT" firstAttribute="leading" secondItem="62G-2u-Xig" secondAttribute="leading" id="dJs-ae-1vV"/>
+                            <constraint firstItem="62G-2u-Xig" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iAX-Fz-LkN"/>
+                            <constraint firstItem="unp-5K-xh3" firstAttribute="top" secondItem="62G-2u-Xig" secondAttribute="bottom" constant="20" id="pmz-RX-Y8z"/>
+                            <constraint firstItem="nhi-7b-s49" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qeB-RL-LGK"/>
+                            <constraint firstItem="tQx-Rm-emr" firstAttribute="trailing" secondItem="62G-2u-Xig" secondAttribute="trailing" id="sCZ-Eb-gIY"/>
+                            <constraint firstItem="unp-5K-xh3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xpn-Q5-pt8"/>
+                            <constraint firstItem="unp-5K-xh3" firstAttribute="leading" secondItem="62G-2u-Xig" secondAttribute="leading" id="yFa-kZ-9fc"/>
+                            <constraint firstItem="9N9-yl-HOp" firstAttribute="top" secondItem="9eB-8j-C5e" secondAttribute="bottom" constant="28" id="yvP-oh-e8a"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnEntrar" destination="9eB-8j-C5e" id="nVi-P5-eS6"/>
                         <segue destination="pWd-nn-MqB" kind="show" identifier="segueLogin" id="3Lc-Lp-sdQ"/>
                         <segue destination="OQy-WH-VUP" kind="show" identifier="segueCadastro" id="lcG-hi-8PS"/>
                     </connections>
@@ -101,7 +114,7 @@
         <!--Register View Controller-->
         <scene sceneID="qY7-MK-cdf">
             <objects>
-                <viewController id="OQy-WH-VUP" customClass="RegisterViewController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="OQy-WH-VUP" customClass="RegisterViewController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KfT-3y-zQB"/>
                         <viewControllerLayoutGuide type="bottom" id="dTe-2I-6Y8"/>
@@ -214,7 +227,7 @@
         <!--Meus Jogos-->
         <scene sceneID="NNs-zg-d7a">
             <objects>
-                <tableViewController storyboardIdentifier="ViewController2" id="CJP-56-UoX" customClass="MyListTableViewController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ViewController2" id="CJP-56-UoX" customClass="MyListTableViewController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="W53-25-0Tl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -250,7 +263,7 @@
         <!--Menu Navigation Controller-->
         <scene sceneID="Tct-0j-QEm">
             <objects>
-                <navigationController id="P02-p0-rCc" customClass="MenuNavigationController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="P02-p0-rCc" customClass="MenuNavigationController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bj1-wF-7f7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -266,7 +279,7 @@
         <!--Interesse-->
         <scene sceneID="0TY-bA-iFx">
             <objects>
-                <tableViewController storyboardIdentifier="ViewController1" id="R3r-xX-42i" customClass="WhishListTableViewController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ViewController1" id="R3r-xX-42i" customClass="WhishListTableViewController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pJb-9q-9Lg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -302,7 +315,7 @@
         <!--Map View Controller-->
         <scene sceneID="Kcx-t6-33g">
             <objects>
-                <viewController storyboardIdentifier="ViewController3" id="tt1-si-5xd" customClass="MapViewController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController3" id="tt1-si-5xd" customClass="MapViewController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DB2-7Z-Sf6"/>
                         <viewControllerLayoutGuide type="bottom" id="1co-Ce-5Vs"/>
@@ -338,23 +351,17 @@
         <!--Buscar Jogos-->
         <scene sceneID="OcX-E2-gbd">
             <objects>
-                <tableViewController storyboardIdentifier="searchViewController" id="I5l-dM-V5a" customClass="SearchTableViewController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="searchViewController" id="I5l-dM-V5a" customClass="SearchTableViewController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="pXt-IW-NgH">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Digite o nome do jogo" id="HZL-ZH-2C5">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="lAH-qD-zvb">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
-                            <scopeButtonTitles>
-                                <string>All</string>
-                                <string>PS3/PS4</string>
-                                <string>Xbox</string>
-                                <string>Other</string>
-                            </scopeButtonTitles>
                             <connections>
-                                <outlet property="delegate" destination="I5l-dM-V5a" id="k3o-n1-9OY"/>
+                                <outlet property="delegate" destination="I5l-dM-V5a" id="esm-wD-3Y6"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -394,7 +401,6 @@
                 <searchDisplayController id="zHM-t2-HJM">
                     <connections>
                         <outlet property="delegate" destination="I5l-dM-V5a" id="VOr-3Y-UeC"/>
-                        <outlet property="searchBar" destination="HZL-ZH-2C5" id="CUF-Ii-Vgu"/>
                         <outlet property="searchContentsController" destination="I5l-dM-V5a" id="xw8-Zh-Oi9"/>
                         <outlet property="searchResultsDataSource" destination="I5l-dM-V5a" id="btA-nJ-NPd"/>
                         <outlet property="searchResultsDelegate" destination="I5l-dM-V5a" id="vvH-9a-3xI"/>
@@ -406,7 +412,7 @@
         <!--Game View Controller-->
         <scene sceneID="ly3-Vh-Xwe">
             <objects>
-                <viewController id="iP7-0L-bgk" customClass="GameViewController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iP7-0L-bgk" customClass="GameViewController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tnG-yt-CRA"/>
                         <viewControllerLayoutGuide type="bottom" id="73c-yb-H0J"/>
@@ -416,7 +422,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo do Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEB-LY-eGA">
-                                <rect key="frame" x="16" y="311" width="568" height="27"/>
+                                <rect key="frame" x="16" y="317" width="568" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="bYH-LD-mAg"/>
                                 </constraints>
@@ -425,7 +431,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plataforma" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRa-7X-LWc">
-                                <rect key="frame" x="16" y="346" width="568" height="21"/>
+                                <rect key="frame" x="16" y="352" width="568" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Y1g-u9-ahL"/>
                                 </constraints>
@@ -434,53 +440,55 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ1-g3-hN0">
-                                <rect key="frame" x="246" y="459" width="108" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <rect key="frame" x="0.0" y="419" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.30333164811566199" green="0.80731139520202022" blue="0.47314067459348752" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Feu-Oj-kWS"/>
-                                    <constraint firstAttribute="width" constant="108" id="YNw-ge-6fs"/>
+                                    <constraint firstAttribute="height" constant="50" id="3M6-EU-fF6"/>
                                 </constraints>
-                                <state key="normal" title="Add My List">
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Eu tenho">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="addMyList:" destination="iP7-0L-bgk" eventType="touchUpInside" id="w5O-Wy-ie5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcA-xG-wdN">
-                                <rect key="frame" x="240" y="497" width="121" height="30"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-0y-g7j">
+                                <rect key="frame" x="202" y="72" width="196" height="237"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="fFq-Vf-otI"/>
-                                    <constraint firstAttribute="width" constant="121" id="tFA-gC-FXl"/>
+                                    <constraint firstAttribute="width" constant="196" id="oPS-5m-7OE"/>
                                 </constraints>
-                                <state key="normal" title="Add Whish List">
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcA-xG-wdN">
+                                <rect key="frame" x="0.0" y="477" width="600" height="50"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Z9Y-te-Ggd"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Eu quero">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="addWhishList:" destination="iP7-0L-bgk" eventType="touchUpInside" id="FyM-1j-c8g"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N2h-0y-g7j">
-                                <rect key="frame" x="202" y="72" width="196" height="231"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="196" id="oPS-5m-7OE"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N2h-0y-g7j" firstAttribute="top" secondItem="tnG-yt-CRA" secondAttribute="bottom" constant="8" symbolic="YES" id="2Oe-9R-ygY"/>
                             <constraint firstItem="73c-yb-H0J" firstAttribute="top" secondItem="XcA-xG-wdN" secondAttribute="bottom" constant="73" id="4Ig-gc-LOo"/>
                             <constraint firstItem="JEB-LY-eGA" firstAttribute="top" secondItem="N2h-0y-g7j" secondAttribute="bottom" constant="8" symbolic="YES" id="A4l-2t-rJd"/>
-                            <constraint firstItem="aZ1-g3-hN0" firstAttribute="top" secondItem="yRa-7X-LWc" secondAttribute="bottom" constant="92" id="AUe-Gm-3eV"/>
                             <constraint firstItem="JEB-LY-eGA" firstAttribute="trailing" secondItem="yRa-7X-LWc" secondAttribute="trailing" id="Ish-NC-BQS"/>
+                            <constraint firstItem="aZ1-g3-hN0" firstAttribute="top" secondItem="yRa-7X-LWc" secondAttribute="bottom" constant="46" id="KGL-Dh-oc3"/>
                             <constraint firstItem="XcA-xG-wdN" firstAttribute="top" secondItem="aZ1-g3-hN0" secondAttribute="bottom" constant="8" symbolic="YES" id="U4o-9v-su5"/>
                             <constraint firstItem="yRa-7X-LWc" firstAttribute="top" secondItem="JEB-LY-eGA" secondAttribute="bottom" constant="8" symbolic="YES" id="VCU-fb-DT9"/>
+                            <constraint firstItem="aZ1-g3-hN0" firstAttribute="leading" secondItem="XcA-xG-wdN" secondAttribute="leading" id="ffk-6Z-239"/>
                             <constraint firstItem="yRa-7X-LWc" firstAttribute="trailing" secondItem="7h5-KI-d5n" secondAttribute="trailingMargin" id="gDg-Vd-kRn"/>
                             <constraint firstItem="yRa-7X-LWc" firstAttribute="leading" secondItem="JEB-LY-eGA" secondAttribute="leading" id="i4U-UC-kMY"/>
                             <constraint firstItem="yRa-7X-LWc" firstAttribute="centerX" secondItem="aZ1-g3-hN0" secondAttribute="centerX" id="lIy-q2-nIw"/>
                             <constraint firstItem="JEB-LY-eGA" firstAttribute="centerX" secondItem="N2h-0y-g7j" secondAttribute="centerX" id="n9r-Mp-LO1"/>
+                            <constraint firstItem="aZ1-g3-hN0" firstAttribute="leading" secondItem="7h5-KI-d5n" secondAttribute="leading" id="rYH-mn-tcO"/>
                             <constraint firstItem="JEB-LY-eGA" firstAttribute="leading" secondItem="7h5-KI-d5n" secondAttribute="leadingMargin" id="rsh-hX-vU6"/>
                             <constraint firstItem="aZ1-g3-hN0" firstAttribute="centerX" secondItem="XcA-xG-wdN" secondAttribute="centerX" id="zgP-6W-Kg6"/>
                         </constraints>
@@ -498,7 +506,7 @@
         <!--Menu Navigation Controller-->
         <scene sceneID="Yk4-Py-RVR">
             <objects>
-                <navigationController id="rVf-Av-9Tw" customClass="MenuNavigationController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="rVf-Av-9Tw" customClass="MenuNavigationController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eft-Dk-5vP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -514,7 +522,7 @@
         <!--Menu Navigation Controller-->
         <scene sceneID="zG7-73-4RF">
             <objects>
-                <navigationController id="h96-nx-FLw" customClass="MenuNavigationController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="h96-nx-FLw" customClass="MenuNavigationController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yV8-PJ-QLn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -530,7 +538,7 @@
         <!--Menu Navigation Controller-->
         <scene sceneID="18Q-Zo-NIV">
             <objects>
-                <navigationController id="pWd-nn-MqB" customClass="MenuNavigationController" customModule="trocaee_temp_caseinsensitive_rename_temp_caseinsensitive_rename" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="pWd-nn-MqB" customClass="MenuNavigationController" customModule="trocae" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sgM-tZ-Cb1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
