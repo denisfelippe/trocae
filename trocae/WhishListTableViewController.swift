@@ -68,13 +68,12 @@ class WhishListTableViewController: UITableViewController, ENSideMenuDelegate, J
         // Configure the cell...
 
         cell.textLabel?.text = whishList[indexPath.row].name
+        cell.detailTextLabel?.text = whishList[indexPath.row].console
         return cell
     }
     
     func atualizaTabela()
     {
-        println("Atualizando tabela")
-        
         // Consulta do banco
         var data: Data = Data()
         whishList = data.recWhishList()

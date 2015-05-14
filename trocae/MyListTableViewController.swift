@@ -46,7 +46,6 @@ class MyListTableViewController: UITableViewController, ENSideMenuDelegate, Json
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        println(myList.count)
         return myList.count
     }
 
@@ -61,13 +60,12 @@ class MyListTableViewController: UITableViewController, ENSideMenuDelegate, Json
         // Configure the cell...
 
         cell.textLabel?.text = myList[indexPath.row].name
+        cell.detailTextLabel?.text = myList[indexPath.row].console
         return cell
     }
     
     func atualizaTabela()
     {
-        println("Atualizando tabela")
-        
         // Consulta do banco
         var data: Data = Data()
         myList = data.recMyList()

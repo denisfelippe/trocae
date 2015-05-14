@@ -16,28 +16,30 @@ class Json: NSObject {
     let session: NSURLSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     var games = [GameItem]()
     var type:String
+    var urlApi:String = "http://localhost:8080/api"
+    var token:String = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NTRiZGNlOThlMGFkYWE3MGI4MTNhMjMiLCJuYW1lIjoiZGVuaXMiLCJ1c2VybmFtZSI6ImRlbmlzZmVsaXBwZSIsInBhc3N3b3JkIjoiMTIzIiwiYWRtaW4iOmZhbHNlLCJ3aXNoX2xpc3QiOlsiNTU0ZTBhYTEzNDFhMWJmMDgxODhiZjZhIiwiNTU0ZTBhYTEzNDFhMWJmMDgxODhiZjZiIl0sIm15X2xpc3QiOlsiNTU0ZTBhYTEzNDFhMWJmMDgxODhiZjcwIiwiNTU0ZTBhYTEzNDFhMWJmMDgxODhiZjZlIl0sImxvY2F0aW9uIjpbeyJsYXQiOi0yMy41NzI4MDEsImxvbiI6LTQ2LjYyMzA2M31dfQ.gr2VGrXDZWMJ_p4wncOP3RRUT9Ow40PUXNCoZWOyOoQ"
     var url:NSURL
-    var endpoints = [
-        "games": "file:///Users/Guest/Documents/games.json",
-        "wish_list": "file:///Users/Guest/Documents/games-wishlist.json",
-        "my_list": "file:///Users/Guest/Documents/games-mylist.json"
+    var endpoints:[String:String] = [
+        "games": "/games",
+        "wish_list": "/wish-list",
+        "my_list": "/my-list",
+        "users": "/users"
     ]
     
     weak var delegate: JsonDelegate?
     
     init(type: String) {
         self.type = type
-        self.url = NSURL(string: endpoints[type]!)!
+        self.url = NSURL(string: urlApi + endpoints[type]! + "?token=" + token)!
     }
     
     func insertGame() {
-        println("entrou insert")
-        
+        println(self.url)
         var coreData: Data = Data()
         
         var games = session.dataTaskWithURL(self.url, completionHandler: {
             (data: NSData!, response:NSURLResponse!, error: NSError!) -> Void in
-            println(self.url)
+            
             if let rows = self.getContent(data) as? [AnyObject] {
                 dispatch_async(dispatch_get_main_queue() , {
                     for gamesJson in rows {

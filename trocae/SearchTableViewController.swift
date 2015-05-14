@@ -21,21 +21,23 @@ class SearchTableViewController: UITableViewController, ENSideMenuDelegate, UISe
         
         let leftButton = UIBarButtonItem(image: UIImage(named: "menu_ico"), style: UIBarButtonItemStyle.Plain, target: self, action: "toggleSideMenuView")
         self.navigationItem.leftBarButtonItem = leftButton
-        
-        var json: Json = Json(type: "games")
-        json.delegate = self
-        // recupera dados do json e grava no core data
-        json.insertGame()
+        self.loadJson()
         
         // Reload the table
         self.tableView.reloadData()
     }
     
+    func loadJson() {
+        var data: Data = Data()
+        data.limpaGames()
+        
+        var json: Json = Json(type: "games")
+        json.delegate = self
+        json.insertGame()
+    }
+    
     func atualizaTabela()
     {
-        println("Atualizando tabela")
-        
-        // Consulta do banco
         var data: Data = Data()
         games = data.recGames()
         
