@@ -47,12 +47,38 @@ class MapViewController: UIViewController, ENSideMenuDelegate, MKMapViewDelegate
         let location = locations[0] as! CLLocation
         
         self.mapView.region = MKCoordinateRegionMakeWithDistance(location.coordinate, 4000, 4000)
-        
         self.locationManager.stopUpdatingLocation()
+        
+        let params:[String: AnyObject] = ["location" : ["lat" : location.coordinate.latitude, "lon": location.coordinate.longitude]]
+        let url = NSURL(string:"http://104.236.107.158:8080/api/me" + token)
+        let request = NSMutableURLRequest(URL: url!)
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.HTTPMethod = "PUT"
+        var err: NSError?
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.allZeros, error: &err)
+        
+        let task = self.session.dataTaskWithRequest(request) {
+            data, response, error in
+            
+            if let httpResponse = response as? NSHTTPURLResponse {
+                if httpResponse.statusCode != 200 {
+                    println("response was not 200: \(response)")
+                    return
+                }
+            }
+            if (error != nil) {
+                println("error submitting request: \(error)")
+                return
+            }
+            
+            // handle the data of the successful response here
+            var result = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.allZeros, error: nil) as? NSDictionary
+        }
+        task.resume()
     }
     
     func loadUsers() {
-        var url = NSURL(string: "http://localhost:8080/api/users" + token)!
+        var url = NSURL(string: "http://104.236.107.158:8080/api/users" + token)!
         
         let ibiraAnnotation:MKPointAnnotation = MKPointAnnotation()
         

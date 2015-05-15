@@ -38,7 +38,7 @@ class GameViewController: UIViewController {
     @IBAction func addMyList(sender: UIButton) {
         
         let params:[String: AnyObject] = ["_id" : game.id]
-        let url = NSURL(string:"http://localhost:8080/api/my-list" + token)
+        let url = NSURL(string:"http://104.236.107.158:8080/api/my-list" + token)
         let request = NSMutableURLRequest(URL: url!)
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.HTTPMethod = "PUT"
@@ -69,6 +69,34 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func addWhishList(sender: UIButton) {
+        
+        let params:[String: AnyObject] = ["_id" : game.id]
+        let url = NSURL(string:"http://104.236.107.158:8080/api/wish-list" + token)
+        let request = NSMutableURLRequest(URL: url!)
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        request.HTTPMethod = "PUT"
+        var err: NSError?
+        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.allZeros, error: &err)
+        
+        let task = self.session.dataTaskWithRequest(request) {
+            data, response, error in
+            
+            if let httpResponse = response as? NSHTTPURLResponse {
+                if httpResponse.statusCode != 200 {
+                    println("response was not 200: \(response)")
+                    return
+                }
+            }
+            if (error != nil) {
+                println("error submitting request: \(error)")
+                return
+            }
+            
+            // handle the data of the successful response here
+            var result = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.allZeros, error: nil) as? NSDictionary
+        }
+        task.resume()
+        
         self.navigationController?.popViewControllerAnimated(true)
     }
     

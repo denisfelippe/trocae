@@ -16,7 +16,7 @@ class Json: NSObject {
     let session: NSURLSession = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
     var games = [GameItem]()
     var type:String
-    var urlApi:String = "http://localhost:8080/api"
+    var urlApi:String = "http://104.236.107.158:8080/api"
     var token:String = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI1NTRiZGNlOThlMGFkYWE3MGI4MTNhMjMiLCJuYW1lIjoiZGVuaXMiLCJ1c2VybmFtZSI6ImRlbmlzZmVsaXBwZSIsInBhc3N3b3JkIjoiMTIzIiwiYWRtaW4iOmZhbHNlLCJ3aXNoX2xpc3QiOlsiNTU0ZTBhYTEzNDFhMWJmMDgxODhiZjZhIiwiNTU0ZTBhYTEzNDFhMWJmMDgxODhiZjZiIl0sIm15X2xpc3QiOlsiNTU0ZTBhYTEzNDFhMWJmMDgxODhiZjcwIiwiNTU0ZTBhYTEzNDFhMWJmMDgxODhiZjZlIl0sImxvY2F0aW9uIjpbeyJsYXQiOi0yMy41NzI4MDEsImxvbiI6LTQ2LjYyMzA2M31dfQ.gr2VGrXDZWMJ_p4wncOP3RRUT9Ow40PUXNCoZWOyOoQ"
     var url:NSURL
     var endpoints:[String:String] = [
